@@ -3,6 +3,7 @@ import { fixture } from "../utils/testbase";
 import { loginPage } from "../pageObjects/loginPage";
 import { accountPage } from "../pageObjects/accountPage";
 
+//runs before each test — setting up the initial page and verifying the home page is loaded
 test.beforeEach(async ({ page }) => {
   //go to opencart
   await page.goto("");
@@ -14,6 +15,7 @@ test.beforeEach(async ({ page }) => {
   await expect(page).toHaveURL(/opencart/);
 });
 
+// Using a custom fixture with test data injected (from testbase)
 fixture("login through UI", async ({ page, data }) => {
   const login = new loginPage(page);
   const account = new accountPage(page);
@@ -21,7 +23,7 @@ fixture("login through UI", async ({ page, data }) => {
   //go to Login Page
   await login.goToLogin();
 
-  //enter credentials
+  //enter credentials and assert that account page is visible after login
   await login.login(process.env.EMAIL, process.env.PASSWORD);
   await expect(account.accountPage).toBeVisible();
 });
