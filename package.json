@@ -6,15 +6,15 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SwathiVisagn123/Playwright_TS.git"
+    "url": "git+https://github.com/RavanSeyfulla/PlayWirght-Typescript.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SwathiVisagn123/Playwright_TS/issues"
+    "url": "https://github.com/RavanSeyfulla/PlayWirght-Typescript/issues"
   },
-  "homepage": "https://github.com/SwathiVisagn123/Playwright_TS#readme",
+  "homepage": "https://github.com/RavanSeyfulla/PlayWirght-Typescript#readme",
   "devDependencies": {
     "@playwright/test": "^1.35.0"
   },
