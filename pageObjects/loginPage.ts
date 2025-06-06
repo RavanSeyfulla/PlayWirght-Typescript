@@ -1,3 +1,9 @@
+/* It defines a loginPage class that:
+	•	Stores locators for login-related UI elements
+	•	Has two reusable functions:
+	•	goToLogin() → navigates to the login page
+	•	login(email, password) → performs the login action */
+
 import { expect, Locator, Page } from "@playwright/test";
 
 export class loginPage {
