@@ -4,6 +4,7 @@ test.beforeEach(async ({ page }) => {
   await page.goto('https://demo.playwright.dev/todomvc');
 });
 
+// Sample to-do items used across tests
 const TODO_ITEMS = [
   'buy some cheese',
   'feed the cat',
@@ -34,6 +35,7 @@ test.describe('New Todo', () => {
       TODO_ITEMS[1]
     ]);
 
+    // Verify both items are now in the list
     await checkNumberOfTodosInLocalStorage(page, 2);
   });
 
