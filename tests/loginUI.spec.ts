@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
   //go to opencart
   await page.goto("");
 
-  // Expect a title "to contain" a substring.
+  //Checking if the page title includes the text "Your Store"
   await expect(page).toHaveTitle(/Your Store/);
 
   // Expects the URL to contain opencart
