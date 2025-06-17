@@ -1,7 +1,7 @@
 import { test as base } from "@playwright/test";
 import testData from "./testData.json";
 
-// Defining a custom fixture type with a 'data' field based on the JSON structure
+// Define a custom type so we can use 'data' (from JSON) in our tests
 type MyFixtures = {
   data: typeof testData;
 type MyFixtures = {
