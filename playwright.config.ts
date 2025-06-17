@@ -13,11 +13,11 @@ require("dotenv").config();
   testDir: "./tests",    // The folder where test files are located
   timeout: 60 * 1000,    // Max time (60 seconds) allowed for each test
   expect: {
-    timeout: 5000,     // Max time (5 seconds) for each expect() to wait (e.g., for elements to appear)
+    timeout: 5000,     // Maximum time (5 seconds) that each expect() will wait for the condition to be true (e.g., waiting for an element to appear)
   },
   /* Run tests in files in parallel */
   fullyParallel: true,
-  /* Fail the build on CI if you accidentally left test.only in the source code. */
+  /* // Prevent running tests with test.only if the tests are running in a CI environment (fail the build if found). */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
